@@ -49,6 +49,7 @@ def server():
                        connection.sendall(payload.encode('ascii'))
                    except Exception as e:
                        logger.info(e)
+                       # 
                        # connection.sendall(e)
                else:
                    logger.info('No data recieved from ', client_address)
