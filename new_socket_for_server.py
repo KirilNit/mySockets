@@ -11,6 +11,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 ch.setFormatter(formatter)
 logger.addHandler(ch)
 
+
 def server():
     # creating a TCP/IP socket
 
@@ -49,7 +50,7 @@ def server():
                        connection.sendall(payload.encode('ascii'))
                    except Exception as e:
                        logger.info(e)
-                       # 
+                       #
                        # connection.sendall(e)
                else:
                    logger.info('No data recieved from ', client_address)
